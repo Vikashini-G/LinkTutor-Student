@@ -94,7 +94,7 @@ struct listClassesScreen: View{
                                     
                               
                                     
-                                    NavigationLink(destination: classLandingPage(teacherUid: detail.teacherUid, academy: detail.academy , skillUid: detail.skillUid , skillOwnerUid: detail.id)) {
+                                    NavigationLink(destination: classLandingPage(teacherUid: detail.teacherUid, academy: detail.academy , skillUid: detail.skillUid , skillOwnerUid: detail.id, className: detail.className)) {
                                         
                                         classPreviewCard(academy: detail.academy, className: detail.className, phoneNumber: 1234567890, price: Int(detail.price))
                                         

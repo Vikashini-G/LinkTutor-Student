@@ -63,6 +63,7 @@
 		DF046C502B9E0442005C9EB2 /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */; };
 		DF0A3FB92B9B9E3E00B1DA6F /* skilltype.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */; };
 		DF0A3FBF2B9C617400B1DA6F /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */; };
+		DF578C812BA24BAB005D0CA1 /* requestConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF578C802BA24BAB005D0CA1 /* requestConfirmation.swift */; };
 		DF65D6F92BA1681D008EB854 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DF65D6F82BA1681D008EB854 /* FirebaseDatabase */; };
 		DF65DD292B997C9E0059C434 /* newPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65DD282B997C9E0059C434 /* newPassword.swift */; };
 		DF8BA3A42BA16B7B00B43FB6 /* RatingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */; };
@@ -145,6 +146,7 @@
 		DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewDetails.swift; path = linkTutor/Screens/Rating/ReviewDetails.swift; sourceTree = SOURCE_ROOT; };
 		DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = skilltype.swift; path = linkTutor/Screens/firebaseModelData/skilltype.swift; sourceTree = SOURCE_ROOT; };
 		DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkillView.swift; path = linkTutor/Screens/firebaseModelData/SkillView.swift; sourceTree = SOURCE_ROOT; };
+		DF578C802BA24BAB005D0CA1 /* requestConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestConfirmation.swift; sourceTree = "<group>"; };
 		DF65DD282B997C9E0059C434 /* newPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPassword.swift; sourceTree = "<group>"; };
 		DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RatingFormView.swift; path = ../RatingFormView.swift; sourceTree = "<group>"; };
 		DFB3857E2B9AC0D6003BCDC3 /* TeachersBasicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersBasicData.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				0F830E422B7907980091EA77 /* listClassesScreeenModel().swift */,
 				0F830E442B7907B90091EA77 /* allPopularCard.swift */,
 				0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */,
+				DF578C802BA24BAB005D0CA1 /* requestConfirmation.swift */,
 			);
 			path = llistClassesScreenModel;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				0FDA44892B6903CC006F1418 /* accentClassViewHeader.swift in Sources */,
 				0F28B0FF2B67FC0800E7E47F /* searchHeader.swift in Sources */,
 				DF0A3FB92B9B9E3E00B1DA6F /* skilltype.swift in Sources */,
+				DF578C812BA24BAB005D0CA1 /* requestConfirmation.swift in Sources */,
 				0F830E4A2B79D04A0091EA77 /* enrolledClassVList.swift in Sources */,
 				0F5E943D2B6667FB00212922 /* searchScreen.swift in Sources */,
 				B1A9E3C92B6CB3FD00324817 /* Notifications.swift in Sources */,

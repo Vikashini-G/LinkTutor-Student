@@ -37,9 +37,6 @@ struct enrolledSubjectCard: View {
                    
                     
                     HStack {
-                        
-                        
-                      
                             Button(action: {
                                 // Delete button action
                                 viewModel.deleteEnrolled(id: id)
@@ -59,7 +56,7 @@ struct enrolledSubjectCard: View {
             .frame(width: min(300,200), height: 110)
             .fixedSize()
             .padding()
-            .background(Color.accent)
+            .background(Color.green)
             .cornerRadius(10)
         }
     }

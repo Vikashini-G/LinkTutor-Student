@@ -223,6 +223,31 @@ class AuthViewModel: ObservableObject {
          }
      }
     
+    //When Enroll Now button will be clicked this function will be called
     
+    func addEnrolledStudent(teacherName: String , skillOwnerDetailsUid: String, studentName: String, studentUid: String, studentNumber: Int, requestAccepted: Int, requestSent: Int, className: String, teacherNumber: Int) {
+        let db = Firestore.firestore()
+        
+        let data: [String: Any] = [
+            "teacherName": teacherName,
+            "skillOwnerDetailsUid": skillOwnerDetailsUid,
+            "studentName": studentName,
+            "studentUid": studentUid,
+            "studentNumber": studentNumber,
+            "RequestAccepted": requestAccepted,
+            "RequestSent": requestSent,
+            "className": className,
+            "teacherNumber": teacherNumber
+        ]
+        
+        db.collection("enrolledStudent").addDocument(data: data){ error in
+            if let error = error {
+                print("Error adding document: \(error.localizedDescription)")
+            } else {
+                print("Document added successfully")
+            }
+        }
+    }
+
     
 }

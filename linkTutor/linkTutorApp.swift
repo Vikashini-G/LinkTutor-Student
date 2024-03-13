@@ -13,9 +13,9 @@ import Firebase
 struct linkTutorApp: App {
     @StateObject var viewModel = AuthViewModel()
     
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init(){ //to make tab bar have green accent on selected bar icon
-        FirebaseApp.configure()
+       // FirebaseApp.configure()
         if #available(iOS 15.0, *) {
             let appearance = UITabBarAppearance()
             appearance.selectionIndicatorTintColor = UIColor.green

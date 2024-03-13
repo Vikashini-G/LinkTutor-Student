@@ -37,9 +37,6 @@ struct RequestSentCard: View {
                    
                     
                     HStack {
-                        
-                        
-                      
                             Button(action: {
                                 // Delete button action
                                 viewModel.deleteEnrolled(id: id)
