@@ -41,7 +41,7 @@ struct signUpView: View {
                         VStack{
                             NavigationLink(destination: loginView()){
                                 Text("Login")
-                                    .foregroundColor(.text)
+                                    .foregroundColor(.black)
                                     .font(AppFont.mediumSemiBold)
                             }
                             Rectangle()
@@ -52,7 +52,7 @@ struct signUpView: View {
                         VStack{
                             NavigationLink(destination: signUpView()){
                                 Text("Sign up")
-                                    .foregroundColor(.text)
+                                    .foregroundColor(.black)
                                     .font(AppFont.mediumSemiBold)
                             }
                             Rectangle()

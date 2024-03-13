@@ -29,7 +29,6 @@
 		0F830E452B7907B90091EA77 /* allPopularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F830E442B7907B90091EA77 /* allPopularCard.swift */; };
 		0F830E4A2B79D04A0091EA77 /* enrolledClassVList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F830E492B79D04A0091EA77 /* enrolledClassVList.swift */; };
 		0F9B1FD82B944AB900250561 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B1FD72B944AB900250561 /* User.swift */; };
-		0F9B1FDA2B94632F00250561 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B1FD92B94632F00250561 /* AuthViewModel.swift */; };
 		0F9B1FDC2B948E7800250561 /* homepageComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B1FDB2B948E7800250561 /* homepageComplete.swift */; };
 		0F9B1FDE2B949F9A00250561 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0F9B1FDD2B949F9A00250561 /* FirebaseFirestore */; };
 		0FA43A642B907A9F000858CA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0FA43A632B907A9F000858CA /* FirebaseAnalyticsSwift */; };
@@ -42,7 +41,6 @@
 		0FAA9BE72B68B97600C0A82D /* quickInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BE62B68B97600C0A82D /* quickInfoCard.swift */; };
 		0FAA9BEC2B68CA9400C0A82D /* reviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BEB2B68CA9400C0A82D /* reviewCard.swift */; };
 		0FAA9BF22B68D32700C0A82D /* ProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */; };
-		0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */; };
 		0FDA44772B68D4F9006F1418 /* loginPageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */; };
 		0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */; };
 		0FDA447C2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */; };
@@ -66,8 +64,11 @@
 		DF046C502B9E0442005C9EB2 /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */; };
 		DF0A3FB92B9B9E3E00B1DA6F /* skilltype.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */; };
 		DF0A3FBF2B9C617400B1DA6F /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */; };
+		DF65D6F92BA1681D008EB854 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DF65D6F82BA1681D008EB854 /* FirebaseDatabase */; };
 		DF65DD292B997C9E0059C434 /* newPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65DD282B997C9E0059C434 /* newPassword.swift */; };
+		DF8BA3A42BA16B7B00B43FB6 /* RatingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */; };
 		DFB3857F2B9AC0D6003BCDC3 /* TeachersBasicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB3857E2B9AC0D6003BCDC3 /* TeachersBasicData.swift */; };
+		DFCC35F92B9FA7E10087BD00 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC35F82B9FA7E10087BD00 /* AuthViewModel.swift */; };
 		DFD7679D2B9DDF6300AD29C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFD7679C2B9DDF6300AD29C9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -114,13 +115,11 @@
 		0F830E442B7907B90091EA77 /* allPopularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allPopularCard.swift; sourceTree = "<group>"; };
 		0F830E492B79D04A0091EA77 /* enrolledClassVList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enrolledClassVList.swift; sourceTree = "<group>"; };
 		0F9B1FD72B944AB900250561 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0F9B1FD92B94632F00250561 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0F9B1FDB2B948E7800250561 /* homepageComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageComplete.swift; sourceTree = "<group>"; };
 		0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classLandingPage.swift; sourceTree = "<group>"; };
 		0FAA9BE62B68B97600C0A82D /* quickInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quickInfoCard.swift; sourceTree = "<group>"; };
 		0FAA9BEB2B68CA9400C0A82D /* reviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewCard.swift; sourceTree = "<group>"; };
 		0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputView.swift; sourceTree = "<group>"; };
-		0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFormView.swift; sourceTree = "<group>"; };
 		0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPageSwiftUIView.swift; sourceTree = "<group>"; };
 		0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimetablePageSwiftUIView.swift; sourceTree = "<group>"; };
 		0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCardSwiftUIView.swift; sourceTree = "<group>"; };
@@ -145,7 +144,9 @@
 		DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = skilltype.swift; path = linkTutor/Components/MockData/skilltype.swift; sourceTree = SOURCE_ROOT; };
 		DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkillView.swift; path = linkTutor/Components/MockData/SkillView.swift; sourceTree = SOURCE_ROOT; };
 		DF65DD282B997C9E0059C434 /* newPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPassword.swift; sourceTree = "<group>"; };
+		DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFormView.swift; sourceTree = "<group>"; };
 		DFB3857E2B9AC0D6003BCDC3 /* TeachersBasicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersBasicData.swift; sourceTree = "<group>"; };
+		DFCC35F82B9FA7E10087BD00 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DFD7679C2B9DDF6300AD29C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +161,7 @@
 				0FA43A782B907BCB000858CA /* FirebaseAnalytics in Frameworks */,
 				0F9B1FDE2B949F9A00250561 /* FirebaseFirestore in Frameworks */,
 				0FA43A662B907A9F000858CA /* FirebaseAuth in Frameworks */,
+				DF65D6F92BA1681D008EB854 /* FirebaseDatabase in Frameworks */,
 				0FA43A6E2B907A9F000858CA /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,8 +288,9 @@
 				0F5E943C2B6667FB00212922 /* searchScreen.swift */,
 				0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */,
 				0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */,
-				0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */,
+				DF335F9A2BA161D800565E77 /* New Group */,
 				0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */,
+				DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -381,9 +384,9 @@
 		B1A9E3BC2B6BEFE900324817 /* LoginSignUp */ = {
 			isa = PBXGroup;
 			children = (
+				DFCC35F82B9FA7E10087BD00 /* AuthViewModel.swift */,
 				B1A9E3B32B6AA87600324817 /* myProfileView.swift */,
 				B1A9E3BA2B6BE8A100324817 /* loginView.swift */,
-				0F9B1FD92B94632F00250561 /* AuthViewModel.swift */,
 				DF65DD282B997C9E0059C434 /* newPassword.swift */,
 				0F9B1FD22B94489700250561 /* DataModel */,
 				B1A9E3BF2B6C097500324817 /* signUpView.swift */,
@@ -421,6 +424,13 @@
 			path = firebaseModeldata;
 			sourceTree = "<group>";
 		};
+		DF335F9A2BA161D800565E77 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +455,7 @@
 				0FA43A772B907BCB000858CA /* FirebaseAnalytics */,
 				0FA43A792B907BCB000858CA /* FirebaseStorage */,
 				0F9B1FDD2B949F9A00250561 /* FirebaseFirestore */,
+				DF65D6F82BA1681D008EB854 /* FirebaseDatabase */,
 			);
 			productName = linkTutor;
 			productReference = 0F5E93FA2B6549F000212922 /* linkTutor.app */;
@@ -588,12 +599,14 @@
 				0F9B1FD82B944AB900250561 /* User.swift in Sources */,
 				B1A9E3C02B6C097500324817 /* signUpView.swift in Sources */,
 				B1A9E3B72B6AB00900324817 /* profileCard.swift in Sources */,
+				DFCC35F92B9FA7E10087BD00 /* AuthViewModel.swift in Sources */,
 				0FDA44862B68FDC2006F1418 /* accentHeader.swift in Sources */,
 				0F830E452B7907B90091EA77 /* allPopularCard.swift in Sources */,
 				0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */,
 				0F5E94002B6549F000212922 /* ContentView.swift in Sources */,
 				DF65DD292B997C9E0059C434 /* newPassword.swift in Sources */,
 				0F5E93FE2B6549F000212922 /* linkTutorApp.swift in Sources */,
+				DF8BA3A42BA16B7B00B43FB6 /* RatingFormView.swift in Sources */,
 				DFB3857F2B9AC0D6003BCDC3 /* TeachersBasicData.swift in Sources */,
 				0FDA448B2B6911A3006F1418 /* classLandingScrollable.swift in Sources */,
 				DF046C502B9E0442005C9EB2 /* ReviewDetails.swift in Sources */,
@@ -608,10 +621,8 @@
 				0F5E943B2B66591300212922 /* navBar.swift in Sources */,
 				B1A9E3AE2B6A946600324817 /* enrolledClassList.swift in Sources */,
 				B1A9E3CB2B6CB5AA00324817 /* timetablesample.swift in Sources */,
-				0F9B1FDA2B94632F00250561 /* AuthViewModel.swift in Sources */,
 				B1A9E3BE2B6BF0F600324817 /* accentLongHeader.swift in Sources */,
 				0F5E94332B657A3400212922 /* enrolledClassCard.swift in Sources */,
-				0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */,
 				0F9B1FDC2B948E7800250561 /* homepageComplete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -985,6 +996,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F17D9B62B9078EE00FB1CF7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		DF65D6F82BA1681D008EB854 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F17D9B62B9078EE00FB1CF7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

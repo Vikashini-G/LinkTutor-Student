@@ -7,7 +7,7 @@ struct classLandingPage: View {
     var teacherUid: String
     var academy: String
     var skillUid : String
-   var skillOwnerUid : String
+    var skillOwnerUid : String
     
    
     @ObservedObject var teacherViewModel = TeacherViewModel.shared
@@ -168,10 +168,9 @@ struct classLandingPage: View {
                             Spacer()
                         
                         } else {
-                                                    Text("Loading...")
-                                                        .font(AppFont.mediumReg)
-                                                }
-                        
+                            Text("Loading...")
+                                .font(AppFont.mediumReg)
+                        }
                     } else {
                         Text("Loading...")
                             .padding()

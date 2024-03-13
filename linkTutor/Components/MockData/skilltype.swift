@@ -32,6 +32,10 @@ struct SkillOwnerDetail: Identifiable, Codable {
     var price: Double
     var skillUid: String
     var teacherUid: String
+    var week :  [String]
+    var startTime : String
+    var endTime : String
+    var mode : String
 }
 
 // Create a view model to fetch the data
@@ -75,7 +79,7 @@ class SkillViewModel: ObservableObject {
                 return
             }
             
-            let details = documents.map { document -> SkillOwnerDetail in
+            let details = documents.compactMap { document -> SkillOwnerDetail? in
                 let data = document.data()
                 return SkillOwnerDetail(
                     id: document.documentID,
@@ -84,7 +88,11 @@ class SkillViewModel: ObservableObject {
                     documentUid: data["documentUid"] as? String ?? "",
                     price: data["price"] as? Double ?? 0,
                     skillUid: data["skillUid"] as? String ?? "",
-                    teacherUid: data["teacherUid"] as? String ?? ""
+                    teacherUid: data["teacherUid"] as? String ?? "",
+                    week: data["week"] as? [String] ?? [],
+                    startTime: data["startTime"] as? String ?? "",
+                    endTime: data["endTime"] as? String ?? "", 
+                    mode: data["mode"] as? String ?? ""
                 )
             }
             
@@ -412,53 +420,61 @@ class SkillViewModel: ObservableObject {
 
 
 //
-//struct SkillView: View {
-//    @ObservedObject var viewModel = SkillViewModel()
-//    @State private var selectedSkillType: SkillType?
-//    
-//    var body: some View {
-//        ScrollView {
-//            ForEach(viewModel.skillTypes) { skillType in
-//                VStack(alignment: .leading) {
-//                    Text("Skill Type: \(skillType.id)")
-//                        .font(.headline)
-//                        .onTapGesture {
-//                            selectedSkillType = skillType
-//                            viewModel.fetchSkillOwnerDetails(for: skillType)
-//                        }
-//                        .padding()
-//                    
-//                    if selectedSkillType == skillType {
-//                        HStack {
-//                            Button("Sort \(skillType.isAscendingOrder ? "Descending" : "Ascending")") {
-//                                if skillType.isAscendingOrder {
-//                                    viewModel.sortDetailsDescending(for: skillType)
-//                                } else {
-//                                    viewModel.sortDetailsAscending(for: skillType)
-//                                }
-//                            }
-//                            .frame(width: 150, height: 30)
-//                            .foregroundColor(.white)
-//                            .padding()
-//                            .background(Color.blue)
-//                            .cornerRadius(8)
-//                        }
-//                    }
-//                    
-//                    ForEach(skillType.skillOwnerDetails) { detail in
-//                        VStack(alignment: .leading) {
-//                            Text("Class Name: \(detail.className)")
-//                                .padding()
-//                            Text("Academy: \(detail.academy)")
-//                                .padding()
-//                            Text("Price: \(detail.price)")
-//                                .padding()
-//                            // Add other fields as needed
-//                        }
-//                    }
-//                }
-//                .padding()
-//            }
-//        }
-//    }
-//}
+struct SkillView: View {
+    @ObservedObject var viewModel = SkillViewModel()
+    @State private var selectedSkillType: SkillType?
+    
+    var body: some View {
+        ScrollView {
+            ForEach(viewModel.skillTypes) { skillType in
+                VStack(alignment: .leading) {
+                    Text("Skill Type: \(skillType.id)")
+                        .font(.headline)
+                        .onTapGesture {
+                            selectedSkillType = skillType
+                            viewModel.fetchSkillOwnerDetails(for: skillType)
+                        }
+                        .padding()
+                    
+                    if selectedSkillType == skillType {
+                        HStack {
+                            Button("Sort \(skillType.isAscendingOrder ? "Descending" : "Ascending")") {
+                                if skillType.isAscendingOrder {
+                                    viewModel.sortDetailsDescending(for: skillType)
+                                } else {
+                                    viewModel.sortDetailsAscending(for: skillType)
+                                }
+                            }
+                            .frame(width: 150, height: 30)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                        }
+                    }
+                    
+                    ForEach(skillType.skillOwnerDetails) { detail in
+                        VStack(alignment: .leading) {
+                            Text("Class Name: \(detail.className)")
+                                .padding()
+                            Text("Academy: \(detail.academy)")
+                                .padding()
+                            Text("Price: \(detail.price)")
+                                .padding()
+                            Text("week: \(detail.week)")
+                                .padding()
+                                .foregroundColor(.red)
+                            // Add other fields as needed
+                        }
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+
+#Preview {
+    SkillView()
+}

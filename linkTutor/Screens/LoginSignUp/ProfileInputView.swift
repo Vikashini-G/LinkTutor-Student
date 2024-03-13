@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct ProfileInputView: View {
-    @State private var image: Image?
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var phoneNumber: String = ""
-    @State private var about: String = ""
-    @State private var showImagePicker: Bool = false
+    @State  var image: Image?
+    @State  var name: String = ""
+    @State  var email: String = ""
+    @State  var password: String = ""
+    @State  var phoneNumber: String = ""
+    @State  var about: String = ""
+    @State  var showImagePicker: Bool = false
+  //  @State private var location : String
     
     var body: some View {
         
@@ -40,7 +41,6 @@ struct ProfileInputView: View {
                             if let image = image {
                                 image
                                     .resizable()
-                                    .scaledToFit()
                                     .frame(width: 100, height: 100)
                                     .cornerRadius(50.0)
                             } else {
@@ -58,6 +58,10 @@ struct ProfileInputView: View {
                         }
                     }
                     .padding()
+                    
+                    if image != nil {
+                        
+                    }
                     
                     List{
                         Section(header: Text("")){

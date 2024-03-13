@@ -2,14 +2,14 @@
 //  RatingFormView.swift
 //  linkTutor
 //
-//  Created by Aditya Pandey on 13/03/24.
+//  Created by user2 on 30/01/24.
 //
 
 import SwiftUI
 
 struct RatingFormView: View {
-    @State private var rating: Int = 0
-    @State private var feedback: String = ""
+    @State  var rating: Int = 0
+    @State  var feedback: String = ""
     
     var body: some View {
         ZStack{
