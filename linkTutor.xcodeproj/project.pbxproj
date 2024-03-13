@@ -140,11 +140,11 @@
 		B1A9E3C82B6CB3FD00324817 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetablesample.swift; sourceTree = "<group>"; };
 		DF046C4D2B9E0373005C9EB2 /* TeacherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeacherDetails.swift; path = linkTutor/TeacherDetails.swift; sourceTree = SOURCE_ROOT; };
-		DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewDetails.swift; path = linkTutor/ReviewDetails.swift; sourceTree = SOURCE_ROOT; };
+		DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewDetails.swift; path = linkTutor/Screens/Rating/ReviewDetails.swift; sourceTree = SOURCE_ROOT; };
 		DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = skilltype.swift; path = linkTutor/Components/MockData/skilltype.swift; sourceTree = SOURCE_ROOT; };
 		DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkillView.swift; path = linkTutor/Components/MockData/SkillView.swift; sourceTree = SOURCE_ROOT; };
 		DF65DD282B997C9E0059C434 /* newPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPassword.swift; sourceTree = "<group>"; };
-		DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFormView.swift; sourceTree = "<group>"; };
+		DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RatingFormView.swift; path = ../RatingFormView.swift; sourceTree = "<group>"; };
 		DFB3857E2B9AC0D6003BCDC3 /* TeachersBasicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersBasicData.swift; sourceTree = "<group>"; };
 		DFCC35F82B9FA7E10087BD00 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DFD7679C2B9DDF6300AD29C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -288,9 +288,8 @@
 				0F5E943C2B6667FB00212922 /* searchScreen.swift */,
 				0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */,
 				0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */,
-				DF335F9A2BA161D800565E77 /* New Group */,
+				DF335F9A2BA161D800565E77 /* Rating */,
 				0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */,
-				DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -417,18 +416,19 @@
 			isa = PBXGroup;
 			children = (
 				DF0A3FB82B9B9E3E00B1DA6F /* skilltype.swift */,
-				DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */,
 				DF046C4D2B9E0373005C9EB2 /* TeacherDetails.swift */,
 				DF0A3FBE2B9C617300B1DA6F /* SkillView.swift */,
 			);
 			path = firebaseModeldata;
 			sourceTree = "<group>";
 		};
-		DF335F9A2BA161D800565E77 /* New Group */ = {
+		DF335F9A2BA161D800565E77 /* Rating */ = {
 			isa = PBXGroup;
 			children = (
+				DF046C4F2B9E0442005C9EB2 /* ReviewDetails.swift */,
+				DF8BA3A32BA16B7B00B43FB6 /* RatingFormView.swift */,
 			);
-			path = "New Group";
+			path = Rating;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

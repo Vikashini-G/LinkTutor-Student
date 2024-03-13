@@ -145,7 +145,7 @@ struct classLandingPage: View {
                                         .font(AppFont.smallSemiBold)
                                         .padding(.bottom, 5)
                                   
-                                    ForEach(reviewViewModel.reviewDetails.filter { $0.teacherUid == "\(teacherUid)" && $0.skillUid == "\(skillUid)"  &&  $0.skillOwnerDetailsUid == "\(skillOwnerUid)"}) { teacherDetail in
+                                    ForEach(reviewViewModel.reviewDetails.filter { $0.skillUid == "\(skillUid)" && $0.teacherUid == "\(teacherUid)"  &&  $0.skillOwnerDetailsUid == "\(skillOwnerUid)"}) { teacherDetail in
                                         if let formattedDate = formatDate(teacherDetail.time) {
                                             reviewCard(reviewRating: teacherDetail.ratingStar , review: "\(teacherDetail.comment)", time : "\(formattedDate)")
                                 

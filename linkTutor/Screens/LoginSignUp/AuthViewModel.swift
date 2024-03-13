@@ -128,4 +128,101 @@ class AuthViewModel: ObservableObject {
        // print("DEBUG: Current user is \(String(describing: self.currentUser))")
     }
     
+    
+    //To add New Review
+     func addReview(comment: String, documentUid : String , ratingStar : Int , skillOwnerDetailsUid : String , skillUid : String, teacherUid : String , time : String , className : String ) {
+         
+                 let db = Firestore.firestore()
+         
+                 Task {
+                     await fetchUser()
+                 }
+                 let userId = Auth.auth().currentUser!.uid
+         
+                 // Create a dictionary representing the updated data
+                 let data: [String: Any] = [
+                     "academy": comment,
+                     "id": documentUid,
+                      "className" : className,
+                     "ratingStar": ratingStar,
+                     "skillOwnerDetailsUid": skillOwnerDetailsUid,
+                     "skillUid": skillUid,
+                     "teacherUid": teacherUid,
+                     "time": time,
+                     "userId": userId
+                 ]
+         
+         // Add the document to review Collection
+         db.collection("review").addDocument(data: data){ error in
+             if let error = error {
+                 print("Error adding document: \(error.localizedDescription)")
+             } else {
+                // TeacherHomePage()
+                 print("Review added successfully to \(className) collection with ")
+             }
+         }
+     }
+     
+     //To delete Review
+     
+     func deleteReview(userId: String, skillOwnerDetailsUid: String, teacherUid: String) {
+         let db = Firestore.firestore()
+
+         db.collection("review")
+             .whereField("userId", isEqualTo: userId)
+             .whereField("skillOwnerDetailsUid", isEqualTo: skillOwnerDetailsUid)
+             .whereField("teacherUid", isEqualTo: teacherUid)
+             .getDocuments { (querySnapshot, error) in
+                 if let error = error {
+                     print("Error fetching documents: \(error)")
+                 } else {
+                     for document in querySnapshot!.documents {
+                         db.collection("review").document(document.documentID).delete { error in
+                             if let error = error {
+                                 print("Error deleting document: \(error.localizedDescription)")
+                             } else {
+                                 print("Review deleted successfully")
+                             }
+                         }
+                     }
+                 }
+             }
+     }
+
+     
+     
+  //    To Update Review
+     func updateReview(comment: String, documentUid : String , ratingStar : Int , skillOwnerDetailsUid : String , skillUid : String, teacherUid : String , time : String , className : String ) {
+
+         let db = Firestore.firestore()
+         
+         Task {
+             await fetchUser()
+         }
+         let userId = Auth.auth().currentUser!.uid
+         
+         // Create a dictionary representing the updated data
+         let updatedData: [String: Any] = [
+             "comment": comment,
+             "id": documentUid,
+             "ratingStar": ratingStar,
+             "skillOwnerDetailsUid": skillOwnerDetailsUid,
+             "skillUid": skillUid,
+             "teacherUid": teacherUid,
+             "time": time,
+             "userId": userId
+         ]
+         
+         // Update the document in the "skillOwnerDetails" collection with the provided documentId
+         db.collection("review").document(documentUid).setData(updatedData, merge: true) { error in
+             if let error = error {
+                 print("Error updating document: \(error.localizedDescription)")
+             } else {
+                 print("Document updated successfully")
+             }
+         }
+     }
+    
+    
+    
 }
