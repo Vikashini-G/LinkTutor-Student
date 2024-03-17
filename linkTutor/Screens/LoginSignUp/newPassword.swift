@@ -12,24 +12,25 @@ struct newPassword: View {
     @State private var confirmPassword = ""
     @EnvironmentObject var viewModel : AuthViewModel
     var body: some View {
-        VStack {
-         
+        VStack(alignment: .leading){
+            HStack{
+                Text("Change password")
+                    .font(AppFont.largeBold)
+                Spacer()
+            }
+            .padding()
             List {
-                
                 VStack(alignment: .leading){
                     Text("Password")
                         .font(AppFont.mediumReg)
                     SecureField("Password", text: $password)
                         .cornerRadius(8)
                 }
-                .padding(.top)
                 .listRowBackground(Color.clear)
                 
                 VStack(alignment: .leading){
-                    
                     Text("Confirm Password")
                         .font(AppFont.mediumReg)
-                    ZStack(alignment : .trailing) {
                         SecureField("Password", text: $confirmPassword)
                             .cornerRadius(8)
                         
@@ -46,12 +47,14 @@ struct newPassword: View {
                                     .foregroundColor(Color(.systemRed))
                             }
                         }
-                    }
                 }
                 .padding(.top)
                 .listRowBackground(Color.clear)
             }
-            VStack {
+            .background(Color.clear)
+            .scrollContentBackground(.hidden)
+            HStack {
+                Spacer()
                 Button {
                     Task {
                         viewModel.changePassword(password: password)
@@ -66,11 +69,14 @@ struct newPassword: View {
                 .padding()
                 .disabled(!FormIsValid)
                 .opacity(FormIsValid ? 1.0 : 0.5)
-                .background(Color.blue)
+                .background(Color.accent)
                 .cornerRadius(50)
+                Spacer()
             }
+            .padding()
             Spacer()
-        }
+        }  //Vstack end
+        .background(Color.background)
     }
 }
 

@@ -22,38 +22,56 @@ struct RequestSentCard: View {
             
             HStack{
                 VStack(alignment: .leading){
-                    Text("\(teacherName)")
-                        .font(AppFont.mediumSemiBold)
+                    HStack{
+                        Text("\(teacherName)")
+                            .font(AppFont.mediumSemiBold)
+                        Spacer()
+                        Button(action: {
+                            // Delete button action
+                            viewModel.deleteEnrolled(id: id)
+                            
+                        }) {
+                            Image(systemName: "trash.fill")
+                                .font(.system(size: 17))
+                                .foregroundColor(.red)
+                        }
+                    }
                     
                     Text("\(className)")
-                        .font(AppFont.smallSemiBold)
-                    
-                    Text("\(phoneNumber)")
                         .font(AppFont.smallReg)
-                        .foregroundColor(.gray)
-                        .padding(.top, 1)
-                   
                     
-                   
-                    
-                    HStack {
-                            Button(action: {
-                                // Delete button action
-                                viewModel.deleteEnrolled(id: id)
-                                
-                            }) {
-                                Text("Delete")
-                                    .frame(minWidth: 90, minHeight: 30)
-                                    .background(Color.red)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(8.0)
-                            }
-                        
+                    HStack{
+                        Image(systemName: "phone.fill")
+                            .font(.system(size: 17))
+                        Text(String("\(phoneNumber)"))
+                            .font(AppFont.smallReg)
                     }
+                    .padding([.top, .bottom], 6)
+                    .padding([.leading, .trailing], 12)
+                    .background(Color.phoneAccent)
+                    .foregroundStyle(Color.black)
+                    .cornerRadius(50)
+                    
+                    //                    HStack {
+                    //                            Button(action: {
+                    //                                // Delete button action
+                    //                                viewModel.deleteEnrolled(id: id)
+                    //
+                    //                            }) {
+                    //                                Text("Delete")
+                    //                                    .frame(minWidth: 90, minHeight: 30)
+                    //                                    .background(Color.red)
+                    //                                    .foregroundColor(.white)
+                    //                                    .cornerRadius(8.0)
+                    //                            }
+                    //
+                    //                    }
+                    Spacer()
                 }
                 Spacer()
             }
-            .frame(width: min(300,200), height: 110)
+            .frame(width: min(300,200), height: 100)
+            .foregroundColor(.black)
             .fixedSize()
             .padding()
             .background(Color.accent)

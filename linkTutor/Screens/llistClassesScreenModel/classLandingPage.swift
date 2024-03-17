@@ -19,7 +19,6 @@ struct classLandingPage: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
                 VStack {
                     //Header
                     HStack {
@@ -87,16 +86,13 @@ struct classLandingPage: View {
                                             Text("Enroll now")
                                                 .font(AppFont.mediumReg)
                                                 .foregroundColor(.black)
-                                                .padding(10)
-                                                .padding([.leading, .trailing], 20)
                                         }
-                                        .background(Color.green)
-                                        .cornerRadius(20)
-                                        .padding([.top, .bottom], 10)
+                                        .frame(width:100,height:20)
+                                        .padding()
+                                        .background(Color.accent)
+                                        .cornerRadius(50)
+                                        .padding(.vertical, 10)
                                     }
-
-                                    
-                                    
                                     Spacer()
                                 }
                                 
@@ -111,7 +107,7 @@ struct classLandingPage: View {
                                             .font(.system(size: 17))
                                         
                                         
-                                        Text("\(teacherDetails.phoneNumber)")
+                                        Text(String("\(teacherDetails.phoneNumber)"))
                                             .font(AppFont.actionButton)
                                         
                                         
@@ -177,8 +173,6 @@ struct classLandingPage: View {
                                                 reviewCard(reviewRating: teacherDetail.ratingStar , review: "\(teacherDetail.comment)", time : "\(formattedDate)")
                                                 
                                             }
-                                            
-                                            
                                         }
                                         //                                    reviewCard(reviewRating: "⭐️⭐️⭐️⭐️⭐️", review: "Loved taking their classes!! ", time:  "20 march")
                                         //                                    reviewCard(reviewRating: "⭐️⭐️⭐️⭐️⭐️", review: "Loved taking their classes!! ", time:  "20 march")
@@ -203,20 +197,15 @@ struct classLandingPage: View {
                                 .padding()
                         }
                     }
-                    .padding()
                     
-                    
-                    
-                }
+                } //v end
+                .padding()
                 .background(Color.background)
                 .onAppear {
                     
                     //                reviewViewModel.fetchReviewDetailsByID(teacherID: teacherUid, skillUid: skillUid)
                     teacherViewModel.fetchTeacherDetailsByID(teacherID: teacherUid)
-                    
-                    
                 }
-            }
         }
         
     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct myProfileView: View {
     @EnvironmentObject var viewModel : AuthViewModel
     @State var showEditView = false
-
+    @State private var showAlert = false
     
     
     var body: some View {
@@ -21,8 +21,6 @@ struct myProfileView: View {
                         .font(AppFont.largeBold)
                     Spacer()
                 }
-                
-                
                 
                 HStack{
                     Image("dummyProfilePic")
@@ -53,10 +51,6 @@ struct myProfileView: View {
                         .sheet(isPresented: $showEditView) {
                             ProfileInputView()
                         }
-//                        NavigationLink(destination: ProfileInputView()){
-//                            Image(systemName: "pencil")
-//                                .foregroundColor(.black)
-//                        }
                         Spacer()
                     }
                 }
@@ -69,25 +63,35 @@ struct myProfileView: View {
                 List{
                     HStack{
                         Text("Change password")
-                       Spacer()
-                        NavigationLink(destination : newPassword()){
-                    
-                        }
-                    
-                        
-                       
+                        NavigationLink(destination : newPassword()){}
+                            .opacity(0.0)
+                        Spacer()
+                        Image(systemName: "arrow.right")
+                            .foregroundColor(.accent)
                     }
                     .listRowBackground(Color.clear)
                     HStack{
                         Text("Delete my account")
                         Spacer()
                         Button{
-                            viewModel.deleteAccount()
+                            showAlert = true
                         } label: {
-                           
                             Image(systemName: "arrow.right")
+                                .foregroundColor(.accent)
                         }
                     }
+                    .alert(isPresented: $showAlert) {
+                                // Alert asking for confirmation
+                                Alert(
+                                    title: Text("Delete Account"),
+                                    message: Text("Are you sure you want to delete your account?"),
+                                    primaryButton: .destructive(Text("Delete")) {
+                                        viewModel.deleteAccount()
+                                        print("Account deleted")
+                                    },
+                                    secondaryButton: .cancel(Text("Cancel"))
+                                )
+                            }
                     .listRowBackground(Color.clear)
                    
                 }
@@ -104,7 +108,7 @@ struct myProfileView: View {
                         Text("Logout")
                             .font(AppFont.mediumSemiBold)
                             .foregroundStyle(Color.text)
-                            .frame(width: 200, height: 35)
+                            .frame(width: 250, height: 35)
                             .padding()
                             .background(Color.elavated)
                             .cornerRadius(50)
@@ -114,7 +118,7 @@ struct myProfileView: View {
                 }
                 //.frame(maxWidth: .infinity, alignment: .center)
                 
-                Spacer()
+//                Spacer()
             }
             .padding()
             .background(Color.background)

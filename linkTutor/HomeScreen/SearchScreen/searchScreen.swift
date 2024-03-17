@@ -5,7 +5,7 @@ struct searchScreen: View{
     @Environment(\.presentationMode) var presentationMode
 //    Text("Hi Emma!").font(.system(size: 36).weight(.semibold)).fontDesign(.rounded).foregroundColor(.black).padding(.bottom, 1)
     init() {
-            var titleFont = UIFont.preferredFont(forTextStyle: .largeTitle) /// the default large title font
+            var titleFont = UIFont.preferredFont(forTextStyle: .largeTitle) //the default large title font
             titleFont = UIFont(
                 descriptor:
                     titleFont.fontDescriptor
@@ -16,7 +16,7 @@ struct searchScreen: View{
                 size: 36
             )
             
-            /// set the rounded font
+            // set the rounded font
             UINavigationBar.appearance().largeTitleTextAttributes = [.font: titleFont]
         }
     var body: some View{

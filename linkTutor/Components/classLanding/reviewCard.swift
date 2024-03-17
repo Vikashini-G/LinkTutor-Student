@@ -54,7 +54,6 @@ struct reviewCard: View {
             }
             .padding([.top, .bottom], 5)
             Divider()
-                .background(Color.black)
         }
     }
 }

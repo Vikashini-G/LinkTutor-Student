@@ -31,7 +31,7 @@ struct loginView: View {
                             .foregroundColor(.accent)
                             .padding(.bottom,25)
                     }
-                    .offset(y: 60)
+//                    .offset(y: 60)
                     
                     //login and signup option
                     HStack{
@@ -55,7 +55,7 @@ struct loginView: View {
                         }
                     }
                     .padding(.horizontal, 50)
-                    .offset(y: 130)
+//                    .offset(y: 130)
                     
                     //login details
                     List{
@@ -83,7 +83,7 @@ struct loginView: View {
                         .listRowBackground(Color.clear)
                     }
                     .padding(.top, 20)
-                    .offset(y: 150)
+//                    .offset(y: 150)
                     .listStyle(PlainListStyle())
                     
                     //button

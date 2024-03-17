@@ -11,7 +11,6 @@ struct ProfileInputView: View {
   //  @State private var location : String
     
     var body: some View {
-        
                 VStack {
                     VStack{
                         HStack{
@@ -88,15 +87,16 @@ struct ProfileInputView: View {
                             .listRowBackground(Color.elavated)
                         }
                     }
-                    .listStyle(.plain)
-                    .background(.clear)
+                    .listStyle(.insetGrouped)
+                    .background(Color.clear)
+                    .scrollContentBackground(.hidden)
                     
                     // Submit Button
                     Button(action: submitProfileData) {
                         Text("Submit")
                             .font(AppFont.mediumSemiBold)
                             .foregroundStyle(Color.black)
-                            .frame(width: 200, height: 35)
+                            .frame(width: 250, height: 35)
                             .padding()
                             .background(Color.accent)
                             .cornerRadius(50)

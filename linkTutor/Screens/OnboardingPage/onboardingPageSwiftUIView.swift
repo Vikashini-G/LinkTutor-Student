@@ -14,12 +14,13 @@ struct onboardingPageSwiftUIView: View {
                     HStack(alignment: .bottom) {
                         NavigationLink(destination: tabBarView()) {
                             Text("Get Started")
+                                .font(AppFont.mediumSemiBold)
                                 .frame(width: 250, height: 35)
                                 .padding()
-                                .background(.littleDarkAccent)
+                                .background(Color.accent)
                                 .foregroundColor(.black)
-                                .cornerRadius(30)
-                                .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                                .cornerRadius(50)
+//                                .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
                         }
                     }
                 }
@@ -54,8 +55,10 @@ struct tabBarView: View {
                             Spacer()
                             NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
                                 Text("Skip")
+                                    .frame(width:50, height:20)
                                     .padding()
-                                    .background(Color.littleDarkAccent)
+                                    .font(AppFont.mediumSemiBold)
+                                    .background(Color.accent)
                                     .foregroundColor(.black)
                                     .cornerRadius(30)
                             }
@@ -85,72 +88,66 @@ struct tabBarView: View {
 // onboardingPage1SwiftUIView
 struct onboardingPage1SwiftUIView: View {
     var body: some View {
-        ZStack {
             VStack{
+                Spacer()
                 HStack(){
                     FeatureRow(imageName: "exploreNewSkills", title: "Explore Your Skills", description: "Discover and enhance your abilities.")
                 }
                 HStack(alignment: .center) {
                     Image(systemName: "circle.fill")
-                        
-                    Image(systemName: "circle")
-                        
-                    Image(systemName: "circle")
-                        
+                    Image(systemName: "circle.fill")
+                        .opacity(0.3)
+                    Image(systemName: "circle.fill")
+                        .opacity(0.3)
                 }
-                .padding()
+                .padding(.top)
+                Spacer()
             }
             .padding()
-            .ignoresSafeArea(.all)
-        }
     }
 }
 
 // onboardingPage2SwiftUIView
 struct onboardingPage2SwiftUIView: View {
     var body: some View {
-        ZStack(alignment: .bottom) {
             VStack {
+                Spacer()
                 HStack {
                     FeatureRow(imageName: "findATutor", title: "Find a Tutor", description: "Discover the perfect tutor for your needs.")
                 }
                 HStack {
-                    Image(systemName: "circle")
-                        
                     Image(systemName: "circle.fill")
-                        
-                    Image(systemName: "circle")
-                        
+                        .opacity(0.3)
+                    Image(systemName: "circle.fill")
+                    Image(systemName: "circle.fill")
+                        .opacity(0.3)
                 }
-                .padding()
+                .padding(.top)
+                Spacer()
             }
             .padding()
-            .ignoresSafeArea(.all)
-        }
     }
 }
 
 // onboardingPage3SwiftUIView
 struct onboardingPage3SwiftUIView: View {
     var body: some View {
-        ZStack(alignment: .bottom) {
             VStack {
+                Spacer()
                 HStack {
                     FeatureRow(imageName: "manageYourTimetable", title: "Manage Your Timetable", description: "Access and organize your schedule with ease.")
                 }
                 HStack {
-                    Image(systemName: "circle")
-                        
-                    Image(systemName: "circle")
-                        
                     Image(systemName: "circle.fill")
-                        
+                        .opacity(0.3)
+                    Image(systemName: "circle.fill")
+                        .opacity(0.3)
+                    Image(systemName: "circle.fill")
                 }
-                .padding()
+                .padding(.top)
+                Spacer()
             }
             .padding()
-            .ignoresSafeArea(.all)
-        }
     }
 }
 
@@ -175,7 +172,7 @@ struct FeatureRow: View {
                     .font(AppFont.mediumSemiBold)
                     .foregroundColor(.gray)
         }
-        .padding(.top, 100)
+//        .padding(.top, 100)
     }
 }
 

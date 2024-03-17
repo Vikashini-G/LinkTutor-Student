@@ -7,7 +7,7 @@ struct header: View{
         HStack{
             VStack(alignment: .leading){
                 HStack{
-                    Text("Hi ")
+                    Text("Hi")
                         .font(AppFont.largeBold)
                     Text(yourName)
                         .font(AppFont.largeBold)

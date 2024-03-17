@@ -19,7 +19,6 @@ struct signUpView: View {
     
     var body: some View {
         NavigationStack{
-            
                 VStack{
                     //Linktutor
                     VStack(alignment: .leading){
@@ -34,14 +33,14 @@ struct signUpView: View {
                             .foregroundColor(.accent)
                             .padding(.bottom,25)
                     }
-                    .offset(y: 30)
+//                    .offset(y: 30)
                     
                     //login and signup option
                     HStack{
                         VStack{
                             NavigationLink(destination: loginView()){
                                 Text("Login")
-                                    .foregroundColor(.black)
+                                    .foregroundStyle(Color.white)
                                     .font(AppFont.mediumSemiBold)
                             }
                             Rectangle()
@@ -52,7 +51,7 @@ struct signUpView: View {
                         VStack{
                             NavigationLink(destination: signUpView()){
                                 Text("Sign up")
-                                    .foregroundColor(.black)
+                                    .foregroundStyle(Color.white)
                                     .font(AppFont.mediumSemiBold)
                             }
                             Rectangle()
@@ -61,7 +60,7 @@ struct signUpView: View {
                         }
                     }
                     .padding(.horizontal, 50)
-                    .offset(y: 40)
+//                    .offset(y: 40)
                     
                     //sign up details
                     
@@ -128,7 +127,7 @@ struct signUpView: View {
                         
                     }
                     .padding(.top)
-                    .offset(y: 40)
+//                    .offset(y: 40)
                     .listStyle(PlainListStyle())
                     
                   
@@ -153,13 +152,12 @@ struct signUpView: View {
                     .background(Color.accent)
                     .cornerRadius(50)
                     
-                   
                 }
                 .padding()
                 .background(Color.background)
                 .environment(\.colorScheme, .dark)
         }
-        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden(true)
     }
 }
 
