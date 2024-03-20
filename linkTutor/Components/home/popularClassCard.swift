@@ -13,11 +13,11 @@ struct popularClassCard: View{
                 //.minimumScaleFactor(0.6)
                     
             //tutor
-            Text("by \(classData.studentsData.diffClassType.tutorName)")
-                .foregroundStyle(Color.black)
-                .font(AppFont.smallReg)
-                .scaledToFit()
-                //.minimumScaleFactor(0.6)
+//            Text("by \(classData.studentsData.diffClassType.tutorName)")
+//                .foregroundStyle(Color.black)
+//                .font(AppFont.smallReg)
+//                .scaledToFit()
+//                //.minimumScaleFactor(0.6)
                 
             //icon
             Image("\(iconName)")
