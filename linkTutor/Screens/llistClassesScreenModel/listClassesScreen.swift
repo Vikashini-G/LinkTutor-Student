@@ -21,7 +21,7 @@ struct listClassesScreen: View{
     
     var body: some View {
         NavigationStack {
-            ZStack{
+            VStack{
               
 //                VStack(alignment: .leading){
 //                    HStack{
@@ -92,8 +92,6 @@ struct listClassesScreen: View{
                             ForEach(skillTypeDetails.skillOwnerDetails) { detail in
                                 VStack(alignment: .leading) {
                                     
-                              
-                                    
                                     NavigationLink(destination: classLandingPage(teacherUid: detail.teacherUid, academy: detail.academy , skillUid: detail.skillUid , skillOwnerUid: detail.id, className: detail.className)) {
                                         
                                         classPreviewCard(academy: detail.academy, className: detail.className, phoneNumber: 1234567890, price: Int(detail.price))
@@ -114,7 +112,6 @@ struct listClassesScreen: View{
                 .onAppear {
                     viewModel.fetchSkillOwnerDetails(for: skillType)
                 }
-                    
                 
             }
             .background(Color.background)
